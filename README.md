@@ -1,16 +1,16 @@
-##Requirements for installation: 
+## Requirements for installation: 
 
-###Python 3: [Installtion Guide](https://docs.python.org/3/using/index.html)
-###Google API Library: 
+### Python 3: [Installtion Guide](https://docs.python.org/3/using/index.html)
+### Google API Library: 
 
-####Use this [guide](https://developers.google.com/api-client-library/python/start/installation) or run
+#### Use this [guide](https://developers.google.com/api-client-library/python/start/installation) or run
 
 ```
 pip install --upgrade google-api-python-client oauth2clien
 ```
 
 
-##To Run the Converter: 
+## To Run the Converter: 
 
 ```
 python3 converter.py [path to source file] [path to destination file]
