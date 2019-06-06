@@ -6,7 +6,7 @@
 #### Use this [guide](https://developers.google.com/api-client-library/python/start/installation) or run
 
 ```
-sudo pip3 install --upgrade google-api-python-client oauth2clien
+sudo pip3 install --upgrade google-api-python-client oauth2client
 ```
 
 
