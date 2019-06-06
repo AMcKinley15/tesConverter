@@ -29,7 +29,13 @@ def findCard(cardName, toSearch):
 	for row in toSearch:
 		if(len(row) != 0):
 			if row[0] == cardName:
-				return row[linkType]
+				try:
+					return row[linkType]
+				except IndexError:
+					print(linkType)
+					print(len(row))
+					print(cardName)
+					return cardName
 
 
 # Setup the Sheets API
@@ -64,9 +70,9 @@ while(True):
 	cardLink = findCard(cardName, spreadsheet)
 	if(cardLink is None):
 		print("%s at index %s is either not in the spreadsheet or is misspelled. Please Fix!" % (cardName, index))
-		break
-
-	articleText = articleText[0:index] + cardLink  + articleText[endIndex+2:]
+		articleText = articleText[0:index]  + "<strong>" + cardName  + "</strong>" + articleText[endIndex+2:]
+	else:
+		articleText = articleText[0:index] + cardLink  + articleText[endIndex+2:]
 
 newArticle = open(sys.argv[2], "w", encoding="utf-8")
 newArticle.write(articleText)
